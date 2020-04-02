@@ -1,0 +1,220 @@
+
+body{
+    padding: 0px !important;
+}
+.menu_btn{
+    border: none;
+    /* background-color: #F9F9F9; */
+    display: none;
+    padding: 0px !important;
+    width: 1.1em !important;
+}
+.menu{
+    position: fixed;
+    right: 0%;
+    float: right;
+    /* Margin & padding adds upto 12px from top */
+    margin-top: 10px;
+    padding-top: 2px;
+
+    padding-bottom: 12px;
+    z-index: 20;
+    outline: none;
+    margin-right: 16px;
+}
+.menu3{
+    position: fixed;
+    right: 0%;
+    float: right;
+    z-index: 20;
+    outline: none;
+    top: 5.5em;
+}
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #ffffff;
+    min-width: 210px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+    margin-right: 16px;
+    margin-top: 42px !important;
+  }
+  
+  .dropdown-content div {
+    color: black;
+    /* padding:9px 15px; */
+    /* text-decoration: none; */
+    /* display: block; */
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    
+  }
+
+
+  .blank_bookmarks_icon, .blank_notes_icon{
+    
+    width: 1.1em !important;
+    padding-left: 10px;
+   
+} 
+
+
+.show {
+      display: block;
+    }
+
+
+.expand_headers{
+    position: sticky;
+    top:0px;
+    z-index: 10;
+    margin: 0px;
+    background-color:#f8f8f8;
+}
+
+div + div{
+    margin-top: 0px !important;
+}
+
+
+.header1, .header2, .header3, .header4{
+    background: #F9F9F9;
+    position: sticky ;
+    position: -webkit-sticky;
+    top: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-wrap: auto;
+    /* font-weight: 600; */
+    font-size: 15px;
+    display: block;
+    color: #000000;
+    margin: 0px !important;
+    border-bottom: 2px solid #707070;
+}
+.header1 {
+    padding-left: 12px;
+}
+
+.header2 {
+    padding-left: 27px;
+}
+
+.header3 {
+    padding-left: 42px;
+}
+
+.header4 {
+    padding-left: 57px;
+}
+
+.wrapped_header {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-wrap: auto;
+}
+
+/* .wrapped_header {
+    /* text-overflow: ellipsis; */
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-wrap: auto;
+} */
+
+@media (min-width: 1200px) {
+    .header1,
+    .header2,
+    .header3,
+    .header4 {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .book_class, .note_class{
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header1,
+    .header2,
+    .header3,
+    .header4 {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .book_class, .note_class{
+        padding-top: 1.7%;
+        padding-bottom: 1.7%;
+        }
+}
+
+table.table {
+    width: 99.8% !important;
+}
+
+img {
+    width: 99.8% !important;
+}
+
+div.legend {
+    width: 99.8% !important;
+}
+
+.wrapped_header>span.headers_span {
+    float: left;
+    width: 78%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+/* .wrapped_header>span.headers_span {
+    float: left;
+    width: 78%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+} */
+
+.bookmarked{
+    width: 1.2em !important;
+    float: right;
+    margin-right: 10%;
+}
+.bookmarked + .noted{
+    margin-right: 1%;
+}
+.noted + .bookmarked{
+    margin-right: 1%;
+}
+.noted{
+    width: 1.2em !important;
+    float: right;
+    margin-right: 11%;
+}
+.menu_btn:focus {
+    outline: none;
+}
+.whiteBackground{
+    background-color: #ffffff;
+}
+.notesBMLink{
+    text-decoration: none;
+    color: #000000;
+}
+.notesBMLink:focus, .notesBMLink:active{
+   background-color: transparent;
+   outline: none;
+}
+.notesBMText{
+    vertical-align:top; 
+    font-size: 15px;
+    padding-left: 14px;
+}

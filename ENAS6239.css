@@ -1,0 +1,1137 @@
+@charset "UTF-8";
+@font-face {
+	font-family: 'roboto-regular';
+	src: url('Roboto-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'roboto-bold';
+	src: url('Roboto-Bold.ttf');
+}
+
+body {
+	-webkit-user-select: none;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	margin: 0px 0px 0px 0px;
+	padding: 5px 3px 5px 3px;
+	font-family: "roboto-regular";
+	color: #3E3D40;
+	font-size: 17px;
+	
+	text-align: left;
+word-spacing: 1px;
+    letter-spacing: -0.25px;
+}
+
+
+/*-----------------------Splitt Mark within Content------------------------*/
+
+p.html-page-end-here {
+	color: #F00;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+}
+
+
+/*-----------------------Standard Text Definition------------------------*/
+
+p {
+	margin: 2px;
+	line-height: normal;
+}
+
+.indent {
+	margin-left: 10px;
+	line-height: normal;
+}
+
+.indent1 {
+	margin-left: 20px;
+	line-height: normal;
+}
+
+p.text {
+	margin-bottom: 5px;
+}
+
+p.text-cent {
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.text-yellow {
+	color: #E3DF70;
+	font-family: "roboto-regular";
+	font-size: 16px;
+	line-height: normal;
+	margin-left: 3px;
+}
+
+
+/*-----------------------Headline Definition - 4 Level (Note: Display: none! Exception Level 4 clarify behavior with Editor)------------------------*/
+
+p.h1:first-child {
+	margin-top: 0px;
+}
+
+p.h1 {
+	color: #08338f;
+	font-size: 17px;
+	line-height: 1.4em;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	margin: 10px 0px 3px 2px;
+	display: none;
+}
+
+p.h2 {
+	color: #298A08;
+	font-size: 16px;
+	line-height: 1.4em;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	margin: 5px 0px 0px 2px;
+	display: none;
+}
+
+p.h3 {
+	color: #FF8000;
+	font-size: 15px;
+	line-height: 1.4em;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	margin: 5px 0px 0px 2px;
+	display: none;
+}
+
+p.h4 {
+	color: #585858;
+	font-size: 16px;
+	line-height: 1.3em;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	margin: 2px 0px 0px 2px;
+	display: none;
+}
+
+
+/*-----------------------Enumeration with Bullet Points - First Level------------------------*/
+
+p.listlevel1:before {
+	content: "\2022";
+	margin-right: 0.5em;
+	color: #58585A;
+}
+
+p.listlevel1 {
+	margin: 0px;
+	text-indent: -0.9em;
+	margin-left: 1.15em;
+	line-height: normal;
+}
+
+
+/*-----------------------Enumeration with Hyphen - Second Level------------------------*/
+
+p.listlevel2:before {
+	content: "\2212";
+	margin-right: 0.4em;
+}
+
+p.listlevel2 {
+	margin: 0px;
+	text-indent: -0.9em;
+	margin-left: 2em;
+	line-height: normal;
+	text-align: left;
+	font-weight: normal;
+}
+
+p.listlevel3:before {
+	content: "\2212";
+	margin-right: 0.3em;
+}
+
+p.listlevel3 {
+	margin: 0px;
+	text-indent: -0.5em;
+	margin-left: 2.3em;
+	/*1.15em;*/
+	line-height: normal;
+}
+
+
+/*-----------------------Numbered List, first and second Level Note: also latin, small/big letters ------------------------*/
+
+ol.enum1 {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-left: 1.7em;
+	list-style-position: outside;
+}
+
+li.enum1 {
+	margin: 0px 2px 0px 15px;
+	text-align: left;
+	line-height: normal;
+}
+
+ol.enum2 {
+	margin: 5px 0px 5px 0px;
+	padding-left: 3.2em;
+	list-style: lower-latin;
+	list-style-position: outside;
+}
+
+li.enum2 {
+	margin: 0px 2px 0px 2px;
+	text-align: left;
+	line-height: normal;
+}
+
+
+/* -----------------Ordered list---------------        */
+
+p.list:before {
+	content: "";
+	margin-right: 0.8em;
+}
+
+p.list {
+	margin: 0px;
+	text-indent: -1.999em;
+	margin-left: 2.0em;
+	margin-bottom: 0.40em;
+	margin-top: 0.05em;
+	color: #2e2d30;
+}
+
+
+/*-----------------------Standard Source Code with div box------------------------*/
+
+p.reference {
+	font-size: 16px;
+	line-height: normal;
+	margin-bottom: 5px;
+}
+
+div.ref {
+	background: #E6E8FA;
+	/*or #f5f5f5 very light bg*/
+	border: 1px solid #FFF;
+	padding: 5px 2px 2px 2px;
+	margin: 7px 1px 13px 5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+}
+
+
+/*-----------------------Standard footnote with div container------------------------*/
+
+p.footnote {
+	font-size: 16px;
+	font-style: italic;
+	line-height: normal;
+	margin-bottom: 5px;
+}
+
+div.footn {
+	background: #D9D9F3;
+	/*or #f5f5f5 very light bg*/
+	border: 1px solid #D9D9F3;
+	padding: 2px 2px 0px 2px;
+	margin: 7px 1px 10px 5px;
+	border-radius: 5px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+}
+
+
+/*----------Standard Image Declaration with div container - use div container for Images and Algorithm-----------*/
+
+div.legend {
+	width: 100%;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	margin-left: 1px;
+	padding: -1px;
+	border: 0px solid #a6003a;
+	color: #58585a;
+	/* gray 80% */
+}
+
+img {
+	width: 100%;
+}
+
+
+/*-----------------------Standard Image/Algorithm caption------------------------*/
+
+p.fig-caption {
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	color: #3E3D40;
+	text-align: left;
+	margin-top: 12px;
+}
+
+
+/*-------------------------------Images------------------------------------*/
+
+@media screen and (max-height: 568px) {
+	Div.imge img {
+		max-width: 310px;
+	}
+}
+
+@media screen and (max-height: 310px) {
+	Div.img img {
+		max-width: 555px;
+	}
+}
+
+@media screen and (max-width: 448px) {
+	Div.img img {
+		max-width: 437px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	Div.img img {
+		max-width: 310px;
+	}
+}
+
+
+/*--------------------------Standard Table Declaration------------------------*/
+
+table.table+table.table {
+	margin-top: 15px;
+}
+
+table.table {
+	width: 100%;
+	table-layout: fixed;
+	border-top: 1px solid #bfbfbf;
+	border-collapse: collapse;
+	margin: 0px 0px 3px 1px;
+}
+table.recomm-table+table.recomm-table {
+	margin-top: 15px;
+}
+
+table.recomm-table {
+	width: 100%;
+	table-layout: fixed;
+	border-top: 1px solid #bfbfbf;
+	border-collapse: collapse;
+	margin: 0px 0px 3px 1px;
+}
+
+/*------------------------------Caption----------------------------*/
+
+caption {
+	margin: 0px 2px 3px 2px;
+	text-align: left;
+}
+
+
+/*-----------Standard Table head declaration, first, second Level and third Level----------*/
+
+th.table-header1 {
+	background-color: #E9E7C1;
+	padding: 3px 2px 3px 2px;
+}
+
+th.table-header2 {
+	background-color: #CACACA;
+	padding: 3px 2px 3px 2px;
+}
+
+th.table-header3 {
+	background-color: #F1E3E8;
+	/*#D5D4D4; */
+	padding: 3px 2px 3px 2px;
+	vertical-align: top;
+}
+
+th.table-header4 {
+	background-color: #4EA1D1;
+	/*#D5D4D4; */
+	padding: 3px 2px 3px 2px;
+	vertical-align: top;
+}
+
+
+/*---------------Border behavior of table header---------------	*/
+
+th.table-header1:first-child {
+	border-bottom: 1px solid #E5E5E5;
+}
+
+th.table-header1+th.table-header1 {
+	border-left: 1px solid #E5E5E5;
+}
+
+th.table-header2+th.table-header2 {
+	border-left: 1px solid #E5E5E5;
+}
+
+th.table-header3+th.table-header3 {
+	border-left: 1px solid #bfbfbf;
+}
+
+th.table-header4+th.table-header4 {
+	border-left: 1px solid #bfbfbf;
+}
+
+
+/*----------Standard Table Header Text declaration---------------*/
+
+p.table-title1 {
+	color: #000000;
+	font-size: 16px;
+	line-height: normal;
+	
+	text-align: left;
+	margin-left: 5px;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+}
+
+p.table-title2 {
+	color: #000000;
+	/*#3E3D40;*/
+	font-size: 16px;
+	font-weight: 450;
+	line-height: normal;
+	
+	text-align: left;
+	margin-left: 5px;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+}
+
+p.table-title3 {
+	color: #000000;
+	font-size: 16px;
+	font-weight: 450;
+	line-height: normal;
+	
+	text-align: left;
+	margin-left: 5px;
+	font-weight: normal;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+}
+
+p.table-title4 {
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 450;
+	line-height: normal;
+	
+	text-align: left;
+	margin-left: 5px;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+}
+
+
+/*---------Table columns and table rows border behavior----------*/
+
+tr:first-child {
+	border-bottom: 1px solid #bfbfbf;
+}
+
+tr+tr {
+	border-bottom: 1px solid #9c9c9c;
+}
+
+td+td {
+	border-left: 1px solid #bfbfbf;
+}
+
+td {
+	padding: 3px 2px 3px 2px;
+	background: #ffffff;
+	vertical-align: top;
+}
+
+
+/*-------------------Standard Table Text----------------------*/
+
+p.table-text {
+	color: #3E3D40;
+	font-family: "roboto-regular";
+	font-size: 16px;
+	line-height: normal;
+	margin-left: 3px;
+	text-align: left;
+}
+
+p.table-text-white {
+	color: #ffffff;
+	font-family: "roboto-regular";
+	font-size: 16px;
+	line-height: normal;
+	margin-left: 3px;
+	text-align: left;
+}
+
+p.table-text-yellow {
+	color: #E3DF70;
+	font-family: "roboto-regular";
+	font-size: 16px;
+	line-height: normal;
+	margin-left: 3px;
+}
+
+
+/*------------------------------------Additional Table Declarations/Exceptions -----------------------------------*/
+
+
+/*---------Standard Table Header Text Centered----------*/
+
+p.table-title1-cent {
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	font-size: 16px;
+	line-height: normal;
+	
+	
+	margin: 3px 2px 0px 2px;
+	text-align: center;
+}
+
+p.table-title2-cent {
+	color: #3E3D40;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	font-size: 16px;
+	line-height: normal;
+	
+	
+	margin: 3px 2px 0px 2px;
+	text-align: center;
+}
+
+p.table-title3-cent {
+	color: #3E3D40;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	font-size: 16px;
+	line-height: normal;
+	
+	
+	margin: 3px 2px 0px 2px;
+	text-align: center;
+}
+
+p.table-title4-cent {
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 450;
+	line-height: normal;
+	
+	text-align: left;
+	margin-left: 5px;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	text-align: center;
+}
+
+
+/*-------------------Standard Table Text centered----------------------*/
+
+p.table-text-cent {
+	color: #3E3D40;
+	font-family: "roboto-regular";
+	font-size: 16px;
+	line-height: normal;
+	margin-left: 3px;
+	text-align: center;
+}
+
+
+/*---------Table Cell Declaration Background any color----------*/
+
+
+/*---------Column background----------*/
+
+td.col-gray1 {
+	background-color: #C1C2C4;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-gray2 {
+	background-color: #E2E3E5;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-green {
+	background-color: #4DB782;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-orange1 {
+	background-color: #FFC806;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-orange2 {
+	background-color: #F68922;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-pink1 {
+	background-color: #F3DEE3;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-yellow {
+	background-color: #FFEA00;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-brown {
+	background-color: #91100A;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-blue1 {
+	background-color: #17859A;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-blue2 {
+	background-color: #77A9BA;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+td.col-blue3 {
+	background-color: #B4CDD8;
+	text-align: left;
+	padding: 5px 2px 5px 2px;
+}
+
+
+/*---------Border Right and Left are Hidden----------*/
+
+td.col-hidden {
+	background-color: #ffffff;
+	padding: 5px 2px 5px 2px;
+	border-right: hidden;
+	border-left: hidden;
+}
+
+
+/*---------Border bottom Hidden----------*/
+
+td.col-bohidden {
+	background-color: #ffffff;
+	padding: 5px 2px 5px 2px;
+	border-bottom: hidden;
+}
+
+
+/*---------Border TOP Hidden----------*/
+
+td.col-tophidden {
+	background-color: #ffffff;
+	padding: 5px 2px 5px 2px;
+	border-top: hidden;
+}
+
+
+/*----------------------------Different Text Highlighting Character styles---------------------------*/
+
+
+/*---------Bold Text black----------*/
+
+span.bold {
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	/*color: #000000;*/
+}
+
+span.normal {
+	font-weight: normal;
+}
+
+
+/*---------Bold Text any color----------*/
+
+span.bold-color {
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	color: #1A60B3;
+}
+
+
+/*---------Bold Text and Underlined----------*/
+
+span.bold-underline {
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	color: #f06e00;
+	text-decoration: underline;
+}
+
+
+/*---------Italic Text--------------*/
+
+span.italic {
+	font-style: italic;
+}
+
+
+/*---------Italic Text and Underlined--------------*/
+
+span.italic-underline {
+	text-decoration: underline;
+	font-style: italic;
+}
+
+
+/*--------------Text Underlined--------------*/
+
+span.underline {
+	text-decoration: underline;
+}
+
+
+/*--------------Text font white--------------*/
+
+span.text-white {
+	color: #ffffff;
+}
+
+p.text-color {
+	color: #5CC4C5;
+}
+
+span.text-color {
+	color: #5CC4C5;
+}
+
+span.math-b {
+	font-style: normal;
+}
+
+span.math-c {
+	font-style: normal;
+}
+
+span.symbol {
+	font-style: normal;
+}
+
+
+/*--------------Text/Number/Sign superscripted/subscripted--------------*/
+
+span.text-sup {
+	vertical-align: top;
+	font-size: 0.7em;
+	margin-left: 1px;
+	margin-right: 1px;
+	line-height: 100%;
+}
+
+span.text-sub {
+	vertical-align: bottom;
+	font-size: 0.7em;
+	margin-left: 1px;
+	margin-right: 1px;
+	line-height: 100%;
+}
+
+text-sub,
+text-sup {
+	line-height: 0.6em;
+}
+
+
+/*----------------------------------Linking extern within HTML Pages (intern)-----------------------*/
+
+
+/*--------------Linking intern-------------*/
+
+
+/* unvisited link */
+
+a.inter-ref:link {
+	color: #4BC851;
+	text-decoration: none;
+}
+
+
+/* visited link */
+
+a.inter-ref:visited {
+	color: #008000;
+}
+
+
+/* mouse over link */
+
+a.inter-ref:hover {
+	color: #B7C3D0;
+}
+
+
+/* selected link 
+.inter-ref:active 		{
+    					color: #0000FF;
+						}*/
+
+
+/*--------------Linking extern-------------*/
+
+
+/* unvisited link */
+
+a.exter-ref:link {
+	color: #4971DD;
+	font-style: italic;
+}
+
+
+/* visited link */
+
+a.exter-ref:visited {
+	color: #0345F7;
+}
+
+
+/* mouse over link */
+
+a.exter-ref:hover {
+	color: #0345F7;
+}
+
+
+/* selected link 
+.exter-ref:active 		{
+    					color: #0000FF;
+						}*/
+
+
+/*--------------Table footnote link-------------*/
+
+div.footnote-ref:link {
+	color: #8B8878;
+	font-style: italic;
+	font-size: 16px;
+}
+
+div.footnote-ref {
+	background: #EEE9BF;
+	/*or #f5f5f5 very light bg*/
+	border: 1px solid #FFF;
+	padding: 5px 2px 2px 2px;
+	margin: 10px 1px 13px 5px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+}
+
+
+
+
+/*---------------------classes and table levels-------------*/
+
+td.class-i
+/*green*/
+
+{
+	background-color: #4DB782;
+	/*73B767*/
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	text-align: center;
+	vertical-align: middle;
+}
+
+td.class-ii {
+	background: red;
+	/* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#fff200, #fcaf17);
+	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#FFF200, #fcaf17);
+	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#FFF200, #fcaf17);
+	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(#FFF200, #fcaf17);
+	/* Standard syntax */
+	width: 100%;
+	height: 100%;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+}
+
+td.class-ii-a
+/*orange*/
+
+{
+	background-color: #FFC806;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	text-align: center;
+	vertical-align: middle;
+}
+
+td.class-ii-b
+/*orange*/
+
+{
+	background-color: #F68922;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	text-align: center;
+	vertical-align: middle;
+}
+
+td.class-iii
+/*red*/
+
+{
+	background-color: #EF4E5B;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	text-align: center;
+	vertical-align: middle;
+}
+
+td.level-a
+/*darkblue*/
+
+{
+	background-color: #17859A;
+	color: #000000;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	text-align: center;
+	vertical-align: middle;
+}
+
+td.level-b
+/*blue*/
+
+{
+	background-color: #77AABA;
+	color: #000000;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	text-align: center;
+	vertical-align: middle;
+}
+
+td.level-c
+/*lightblue*/
+
+{
+	background-color: #C2D4DE;
+	/*8D77AA*/
+	color: #000000;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+/*------------------Opacity----------------------*/
+
+div+div {
+	margin-top: 13px;
+}
+
+div.box-opacity {
+	background-color: #D4D4D4;
+	filter: alpha(opacity=20);
+	/* IE 5-7 */
+	opacity: 0.4;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)"
+}
+
+
+/*------------------Opacity with background image and font black----------------------*/
+
+div.background {
+	background: url(img/flower2.jpg) repeat;
+	border: 1px solid pink;
+	border-radius: 15px;
+}
+
+div.transbox {
+	margin: 30px;
+	background-color: #ffffff;
+	border: 1px solid pink;
+	border-radius: 0px 25px 0px 25px;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	/* For IE8 and earlier */
+}
+
+div.transbox p {
+	margin: 5%;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	color: #000000;
+}
+
+
+/*------------------listing with brace = ) https://css-tricks.com/almanac/properties/l/list-style/ ----------------------*/
+
+ol.brace {
+	/*list-style-type: lower-alpha;*/
+	/*list-style-type: upper-roman;*/
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-left: 1.7em;
+	list-style-position: outside;
+}
+
+li.brace:before {
+	content: ")";
+	margin-left: -11px;
+	margin-right: 8px;
+}
+
+li.brace {
+	margin: 0px 2px 0px 3px;
+	text-align: left;
+	line-height: normal;
+}
+
+span.text-blue {
+	color: #0080C6;
+}
+
+span.bold-blue {
+	color: #0080C6;
+	font-weight: bold;
+	font-family: 'roboto-bold';
+}
+
+p.list-level1-black:before {
+	content: "\2022";
+	margin-right: 0.5em;
+	color: #000000;
+}
+
+p.list-level1-black {
+	margin: 0px;
+	text-indent: -0.9em;
+	margin-left: 1.15em;
+	line-height: normal;
+}
+
+.center {
+	text-align: center;
+	/*  additional class for center alignment  */
+}
+
+.bold-black {
+	font-weight: bold;
+	font-family: 'roboto-bold';
+}
+
+div.box {
+	background: #f5f5f5;
+	border: 1px solid #FFF;
+	padding: 2px 2px 2px 2px;
+	margin: 5px 7px 7px 2px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+}
+
+p.reference {
+	font-size: 13px;
+	line-height: normal;
+}
+
+.bold-home {
+	font-weight: bold;
+	font-family: 'roboto-bold';
+	color: #d00737;
+	/* red font color*/
+}
+
+span.sup {
+	vertical-align: top;
+	font-size: 0.8em;
+	line-height: 100%;
+}
+
+sub,
+sup {
+	line-height: 0.6em;
+}
+
+
+/*--------------AP special tagging-------------							
+
+Ws-b
+						{	
+						margin: 2px;
+						font-weight: bold;
+font-family: 'roboto-bold';
+						}
+						
+Rp-OTC					{	
+						margin: 2px;
+						font-weight: normal;
+						}
+						
+HWZ-SS					{	
+						margin: 2px;
+						font-weight :normal;
+						}
+
+Hn-b					{	
+						margin: 2px;
+						font-weight: bold;
+font-family: 'roboto-bold';
+						}
+						
+Appl					{	
+						margin: 2px;
+						font-weight: normal;
+						}
+						
+Dosis					{	
+						margin: 2px;
+						font-weight: normal;
+						}
+
+Gewebe_text				{	
+						margin: 2px;
+						font-weight: normal;
+						}
+
+Wirkung 				{	
+						margin: 2px;
+						font-weight: normal;
+						}
+						*/

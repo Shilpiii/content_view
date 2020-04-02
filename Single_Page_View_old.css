@@ -1,0 +1,156 @@
+.arrow_class, .book_class, .note_class{
+    
+    width: 1.7em !important;
+    height: 1.5em !important;
+    background-color: #f8f8f8; 
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    text-wrap: auto;
+    font-weight: bold;
+    display: none;
+    color: #000000;
+    margin: 0px !important;
+    z-index: 1;
+    opacity: 10; 
+
+}
+.arrow_class2{
+    
+    width: 1.7em !important;
+    height: 1.5em !important;
+    background-color: #f8f8f8; 
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    text-wrap: auto;
+    font-weight: bold;
+    
+    color: #000000;
+    margin: 0px !important;
+    z-index: 100;
+    opacity: 10; 
+
+}
+
+.expand_headers{
+    position: sticky;
+    top:0px;
+    /* height: 200px; */
+ z-index: 10; 
+    background-color:#f8f8f8;
+     /* display:none; */
+}
+
+div + div{
+    margin-top: 0px !important;
+}
+.arrow_class{
+    position: fixed !important;
+    top: 0px;
+    right: 0em;
+    padding-right: 0px !important;
+}
+
+.arrow_class2{
+    position: fixed !important;
+    top: 0px;
+    right: 0em;
+    padding-right: 0px !important;
+}
+
+/* .book_class{
+    position: fixed !important;
+    top: 0px;
+    right: 0em;
+    padding-right: 0px !important;
+}
+
+.note_class{
+    position: fixed !important;
+    top: 0px;
+    right: 1.6em;
+} */
+
+.header1, .header2, .header3, .header4{
+    background: #f8f8f8;
+    position: sticky ;
+    position: -webkit-sticky;
+    top: 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-wrap: auto;
+    font-weight: bold;
+    display: block;
+    color: #000000;
+    margin: 0px !important;
+    border-bottom: 2px solid gray;
+}
+.header1 {
+    padding-left: 0.4em;
+}
+
+.header2 {
+    padding-left: 1em;
+}
+
+.header3 {
+    padding-left: 2em;
+}
+
+.header4 {
+    padding-left: 3em;
+}
+
+.wrapped_header {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-wrap: auto;
+}
+
+@media (min-width: 1200px) {
+    .header1,
+    .header2,
+    .header3,
+    .header4 {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .book_class, .note_class{
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header1,
+    .header2,
+    .header3,
+    .header4 {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .book_class, .note_class{
+        padding-top: 1.7%;
+        padding-bottom: 1.7%;
+        }
+}
+
+table.table {
+    width: 99.8% !important;
+}
+
+img {
+    width: 99.8% !important;
+}
+
+div.legend {
+    width: 99.8% !important;
+}
+
+.wrapped_header>span.headers_span {
+    float: left;
+    width: 70%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

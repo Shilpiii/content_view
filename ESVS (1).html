@@ -1,0 +1,842 @@
+<!DOCTYPE html lang="en">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ESVS</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=1" name="viewport" />
+    <!-- <link charset="UTF-8" href="HighLight.css" rel="stylesheet" type="text/css" /> -->
+    <link href="ESVS.css" rel="stylesheet" type="text/css">
+    <link href="Single_Page_View.css" rel="stylesheet" type="text/css">
+    <!-- <script type="text/javascript" src="jquery-2.0.31.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="jquery-3.4.1.min.js"></script> -->
+
+    <!-- <script type="text/javascript" src="HighlightSearch.js"></script> -->
+    <script type="text/javascript" src="Single_Page_View.js"></script>
+
+</head>
+<!-- onscroll="initialise();" -->
+
+<body onload="calculate_white_space();" onscroll="initialise();" >
+
+    <!-- <div class="arrow_class" onclick="expandHeader();"><img src="expand_black.png"  class="down_arrow_icon" ></div> -->
+    <div class="menu">
+        <button class="menu_btn"><img src="menu.png"></button>
+    </div>
+    <div id="dropdown" class="dropdown-content"> 
+        <div class="note_class" onclick="getPageIDForNotes(pageid_note)">
+            <img src="noted.png" class="blank_notes_icon" >
+            <span style="vertical-align:19%;
+            font-size: 16px;" id="takeNote">Take a note</span>
+        </div> 
+        <div class="book_class" onclick="getPageIDForBookmarks(pageid_book)">
+            <img src="bookmarked.png"  class="blank_bookmarks_icon" >
+            <span style="vertical-align:19%; font-size:16px" id="bookmarkPage">Bookmark this page</span>
+        </div>
+    </div>
+   <div class="expand_headers" id="expand_headers" onclick="collapseHeader();">
+        <div id="level1"></div>
+        <div id="level2"></div>
+        <div id="level3"></div>
+        <div id="level4"></div>
+    </div> 
+
+        <!-- <div class="book_class"><img src="book_empty_black.png"  class="blank_bookmarks_icon" onclick="getPageIDForBookmarks(pageid_book)"></div>
+        <div class="note_class"><img src="note_empty_black.png" class="blank_notes_icon" onclick="getPageIDForNotes(pageid_note)"></div> -->
+    
+    <div class="content_div">
+        <div class="header1" id="ENAS5526_1.0.0.0"  data-numtree="1.0.0.0"><span class="headers_span">1.0.0.0 Introduction</span></div>
+
+        <img src="Surgical_pro.png" width="100%"> 
+
+    </div>
+    <div class="content_div">
+        <div class="header1" id="ENAS5526_2.0.0.0"  data-numtree="2.0.0.0"><span class="headers_span">2.0.0.0 Table Classification</span></div>
+
+
+        <table class="table">
+            <colgroup>
+                <col width="30%" />
+                <col width="35%" />
+                <col width="35%" />
+            </colgroup>
+            <tbody>
+                <tr>
+                    <th class="table-header1">&nbsp;</th>
+                    <th class="table-header1">
+                        <p class="table-title1">Acute PJI (im&shy;ma&shy;ture biofilm)</p>
+                    </th>
+                    <th class="table-header1">
+                        <p class="table-title1">Chron&shy;ic PJI (ma&shy;ture biofilm)</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td class="col-blue1">
+                        <p class="table-text"><span class="bold">Patho&shy;gen&shy;e&shy;sis</span></p>
+
+                        <p class="table-text">▪ <span class="bold">Pe&shy;ri&shy;op&shy;er&shy;a&shy;tive</span></p>
+                    </td>
+                    <td class="col-blue1">&nbsp;
+                        <p class="table-text">&lt;4 weeks af&shy;ter surgery (ear&shy;ly)</p>
+                    </td>
+                    <td class="col-blue1">&nbsp;
+                        <p class="table-text">&ge;4 weeks af&shy;ter surgery (de&shy;layed/​low-​grade)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-blue2">
+                        <p class="table-text">▪ Hematoge&shy;nous<span class="underline">or</span> per con&shy;ti&shy;nu&shy;i&shy;tatem
+                        </p>
+                    </td>
+                    <td class="col-blue2">&nbsp;
+                        <p class="table-text">&lt;3 weeks of symp&shy;tom du&shy;ra&shy;tion</p>
+                    </td>
+                    <td class="col-blue2">&nbsp;
+                        <p class="table-text">&ge;3 weeks of symp&shy;tom du&shy;ra&shy;tion</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-blue1">
+                        <p class="table-text"><span class="bold">Clin&shy;i&shy;cal fea&shy;tures</span></p>
+                    </td>
+                    <td class="col-blue1">
+                        <p class="table-text"><span class="text-red">Acute pain</span>, fever, red/​ swollen joint, pro&shy;longed post&shy;op&shy;er&shy;a&shy;tive dis&shy;charge (&gt;7-​10 days)</p>
+                    </td>
+                    <td class="col-blue1">
+                        <p class="table-text"><span class="text-red">Chron&shy;ic pain</span>, loos&shy;en&shy;ing of the pros&shy;the&shy;sis, si&shy;nus tract (fis&shy;tu&shy;la)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-blue2">
+                        <p class="table-text">Causative mi&shy;croor&shy;gan&shy;ism</p>
+                    </td>
+                    <td class="col-blue2">
+                        <p class="table-text"><span class="text-red">High-​vir&shy;u&shy;lent:</span></p>
+
+                        <p class="table-text"><span class="italic">Staphy&shy;lo&shy;coc&shy;cus au&shy;reus,</span> gram-​neg&shy;a&shy;tive bac&shy;te&shy;ria <span class="italic">(e.g. Es&shy;cherichia
+                                coli, Kleb&shy;siel&shy;la, Pseudomonas aerug&shy;i&shy;nosa)</span></p>
+                    </td>
+                    <td class="col-blue2">
+                        <p class="table-text"><span class="text-red">Low-​vir&shy;u&shy;lent:</span></p>
+
+                        <p class="table-text">Co&shy;ag&shy;u&shy;lase-​neg&shy;a&shy;tive staphy&shy;lo&shy;coc&shy;ci (e.g. <span class="italic">Staphy&shy;lo&shy;coc&shy;cus epi&shy;der&shy;midis),
+                                Cutibac&shy;teri&shy;um ac&shy;nes</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-blue2">
+                        <p class="table-text">&nbsp;</p>
+                    </td>
+                    <td class="col-blue2">
+                        <p class="text3">Staphy&shy;lo&shy;coc&shy;cus au&shy;reus<span class="table-text">,</span></p>
+                    </td>
+                    <td class="col-blue2">
+                        <p class="table-text">Co&shy;ag&shy;u&shy;lase-​neg&shy;a&shy;tive</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-blue1">
+                        <p class="table-text"><span class="bold">Sur&shy;gi&shy;cal treat&shy;ment</span></p>
+                    </td>
+                    <td class="col-blue1">
+                        <p class="table-text"><span class="text-red">Débride&shy;ment &amp; re&shy;ten&shy;tion of
+                                pros&shy;the&shy;sis</span> (change of mo&shy;bile parts)</p>
+                    </td>
+                    <td class="col-blue1">
+                        <p class="table-text"><span class="text-red">Com&shy;plete re&shy;moval of
+                                pros&shy;the&shy;sis</span>(ex&shy;change in one or two stages)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="content_div">
+        <div class="header1" id="ENAS5526_3.0.0.0"  data-numtree="3.0.0.0"><span class="headers_span">3.0.0.0 Introduction and General
+                Aspects</span></div>
+
+
+        <div class="header2" id="ENAS5526_3.1.0.0"  data-numtree="3.1.0.0"><span class="headers_span">3.1.0.0 Introduction and Methods</span>
+        </div>
+
+
+
+        <div class="header3" id="ENAS5526_3.1.1.0"  data-numtree="3.1.1.0"><span class="headers_span">3.1.1.0 Overview</span></div>
+
+
+        <p class="text">Members of this Guideline Writing Committee (GWC) were selected by the European Society for Vascular Surgery (ESVS) to represent physicians involved in the management of patients with abdominal aortic and iliac artery aneurysms. The members of
+            the GWC have provided disclosure statements of all relationships that might be perceived as real or potential sources of conflict of interest. These disclosure forms are kept on file at the headquarters of the ESVS.
+        </p>
+
+        <p class="text">The ESVS Guidelines Committee (GC) was responsible for the endorsement process of this guideline. All experts involved in the GWC have approved the final document. The guideline document underwent the formal external expert review process and
+            was reviewed and approved by the ESVS GC and by the <span class="italic">European Journal of Vascular and
+                Endovascular Surgery (EJVES).</span> This document has been reviewed in three rounds by 23 reviewers including 11 members of GC and 12 external reviewers from Europe, America, Asia, and Australia. All reviewers assessed all versions and
+            finally approved the final version of this document.</p>
+
+
+    </div>
+    <div class="content_div">
+        <div class="header3" id="ENAS5526_3.1.2.0"  data-numtree="3.1.2.0"><span class="headers_span">3.1.2.0 The Purpose of These
+                Guidelines</span>
+        </div>
+
+        <p class="text">The ESVS has developed clinical practice guidelines for the care of patients with aneurysms of the abdominal aorta and iliac artery, with the aim of assisting physicians in selecting the best management strategy.
+        </p>
+
+        <p class="text">The first ESVS abdominal aortic aneurysm (AAA) guideline was published as a supplement in EJVES in 2011, under the leadership of Frans Moll.<a href="485"><span class="text-sup">485</span></a> Since then it has been the most cited (396 citations
+            during 2010e2014) and downloaded (>3000 in 2015) paper in the <span class="italic">EJVES</span> with a major impact on clinical practice and research. In 2015, the ESVS GC, under the leadership of Philippe Kolh, initiated a process to update
+            the AAA guideline.
+        </p>
+
+        <p class="text">The present guideline is a complete makeover. Several new topics, not addressed in the previous 2011 guidelines, have been added, such as juxtarenal AAA, isolated iliac aneurysms, mycotic and inflammatory aneurysms, and concomitant malignant disease.
+            Also, new treatment concepts, such as fenestrated endovascular aneurysm repair (EVAR), chimney EVAR (chEVAR) and endovascular aneurysm seal (EVAS) are covered. Furthermore, service standards and logistics of importance, including surgical
+            volume requirements and acceptable waiting time for surgery, are addressed. The patient’s perspective has been included for the first time in an ESVS guideline. For already established topics, several updated recommendations have been made
+            based on new data/evidence, such as recommendations on an EVAR first strategy for ruptured AAA (rAAA), a stratified less frequent follow up regimen after EVAR, and an updated surveillance protocol for small AAAs and subaneurysms.
+        </p>
+
+        <p class="text">The guideline, written and approved by the 16 members of the GWC, who are all members of the ESVS, is based on scientific evidence completed with expert opinion on the matter. By summarising and evaluating the best available evidence, recommendations
+            for the evaluation and treatment of patients have been formulated.</p>
+
+        <p class="text">The recommendations represent the general knowledge at the time of publication, but technology and disease knowledge in this field may change rapidly; therefore, recommendations can become outdated. It is an aim of the ESVS to update the guidelines
+            when important new insights in the evaluation and management of diseases of the abdominal aorta and iliac artery become available.</p>
+
+        <p class="text">Although guidelines have the purpose of promoting a standard of care according to specialists in the field, under no circumstance should this guideline be seen as the legal standard of care in all patients. The document provides a guiding principle,
+            but the care given to an individual patient is always dependent on many factors including symptoms, comorbidities, age, level of activity, treatment setting, available techniques, and other factors.</p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header3" id="ENAS5526_3.1.3.0"  data-numtree="3.1.3.0"><span class="headers_span">3.1.3.0 Methodology</span>
+        </div>
+
+
+
+        <div class="header4" id="ENAS5526_3.1.3.1"  data-numtree="3.1.3.1"><span class="headers_span">3.1.3.1 Strategy</span>
+        </div>
+
+        The GWC convened on January 18, 2016, during a meeting in Hamburg. At that meeting the tasks in creating the guideline were evaluated and distributed among the committee members. Following preparation of the ﬁrst draft, GWC members participated in a second
+        meeting in Uppsala in March 2017 to review the wording/grading of each recommendation. If there was no unanimous agreement, discussions were held to decide how to reach a consensus. If this failed, then the wording, grade, and level of evidence
+        was secured via a majority vote of the GWC members. The ﬁnal version of the guideline was submitted in June 2018.
+        </p>
+        <p class="text">These guidelines will be updated continuously.</p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header4" id="ENAS5526_3.1.3.2"  data-numtree="3.1.3.2"><span class="headers_span">3.1.3.2 Literature search and
+                selection</span>
+        </div>
+
+        <p class="text">Members of the committee, supported by clinical librarians performed the literature search for this guideline systematically in Medline (through PubMed), Embase, Clinical Trial databases, and the Cochrane Library up to December 31, 2016. Reference
+            checking and hand search by the GWC members added other relevant literature. A second literature search for papers published between May 2016 and January 2018 was performed in May 2018. The members of the GWC performed the literature selection
+            based on information provided in the title and abstract of the retrieved studies.</p>
+        <p class="text">Criteria for search and selection were (1) Language: English. (2) Level of evidence: Selection of the literature was performed following the pyramid of evidence, with aggregated evidence at the top of the pyramid (systematic reviews, metaanalyses),
+            then randomised controlled trials, then observational studies. Single case reports, animal studies, and in vitro studies at the bottom of the pyramid were excluded, leaving expert opinions at the bottom of the pyramid. The level of evidence
+            per section in the guideline is dependent on the level of evidence available on the speciﬁc subject. (3) Sample size: Larger studies were given more weight than smaller studies. (4) Relevant articles published after the search date or in another
+            language were included, but only if they were of paramount importance to this guideline.</p>
+
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_3.1.3.3"  data-numtree="3.1.3.3"><span class="headers_span">3.1.3.3 Weighing the evidence</span>
+        </div>
+
+        <p class="text">To deﬁne the current guidelines, members of the GWC reviewed and summarised the selected literature. Conclusions were drawn based on the scientiﬁc evidence. The recommendations in the guidelines in this document are based on the European Society
+            of Cardiology (ESC) grading system. For each recommendation, the letter A, B, or C marks the level of current evidence (Table 1.1). Weighing the level of evidence and expert opinion, every recommendation is subsequently marked as either Class
+            I, IIa, IIb, or III (Table 1.2).</p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header4" id="ENAS5526_3.1.3.4"  data-numtree="3.1.3.4"><span class="headers_span">3.1.3.4 The patients perspective</span>
+        </div>
+
+        <p class="text">The goals behind patient participation in healthcare decision making can be categorised as democratisation and increased quality of decisions.<a href="725"><span class="text-sup">725</span></a> Patient engagement improves the validity of clinical
+            guidelines and is encouraged by international and national groups.<a href="126"><span
+                    class="text-sup">126</span></a><span class="text-sup">,</span><a href="294"><span
+                    class="text-sup">294</span></a><span class="text-sup">,</span>
+            <a href="566"><span class="text-sup">566</span></a>
+        </p>
+        <p class="text">In order to improve accessibility and interpretability for patients and the public the plain English summaries for these guidelines were subjected to a lay review process. Information for patients was drafted for each subchapter which was read
+            and amended by a vascular nurse specialist and at least one lay person or patient, before going to the Leicester patient focus group (PFG) for their opinions.</p>
+        <p class="text">Men with small AAA under surveillance in the Leicester (UK) Vascular Surgery Unit were invited to attend a focus group meeting. All men had previously attended a patient education event to provide information about the clinical management of small
+            AAA. This included the rationale for intervention thresholds, measures to improve fitness in preparation for surgery, and how decisions between endovascular repair, open surgery, and optimal medical therapy are made when a patient is referred
+            for consideration of surgery.
+        </p>
+        <p class="text">Eight men attended a focus group discussion in November 2016 and July 2017. The provisional plain English summaries for the guidelines had been sent to the group of men attending, one week prior to the meeting. The men had been asked to read the
+            text in preparation for the meeting. At the meeting the background to the ESVS guideline development process was presented.
+        </p>
+        <p class="text">The main theme that arose fromthe discussions was that of clarity, consistency, and simplicity in the presentation of facts and recommendations in the plain English summaries. A recurring example raised by the men in the group was the requirement
+            for contextualisationwhen presenting risk, which was incorporated into subsequent drafts. Other changes that were made in response to the input of the PFG were the combination of all plain English summaries into a single document with a strong
+            focus on dispelling medical myths about AAA, the provision of more information about how an individual may reduce their risk from AAA/surgery and the generation of a list of key facts about AAA for public use.</p>
+        <p class="text">The PFG activities were conducted in Leicester, UK and involved only men with small AAAs under surveillance. No women with AAA, or the partners of patients were involved in the exercise. These limitations should be taken into consideration when
+            reviewing this report.</p>
+    </div>
+    <div class="content_div">
+
+
+        <div class="header2" id="ENAS5526_3.2.0.0"  data-numtree="3.2.0.0"><span class="headers_span">3.2.0.0 Service Standards</span>
+        </div>
+
+
+
+        <div class="header3" id="ENAS5526_3.2.1.0"  data-numtree="3.2.1.0"><span class="headers_span">3.2.1.0 Overview </span>
+        </div>
+
+
+        <p class="text">Management and treatment of AAA is associated with risk for the patient and puts great demands on the organisation. This chapter discusses general recommendations concerning quality, availability, experience, and time frames that apply to contemporary
+            management and treatment of AAA. The recommendations made herein are only valid as long as all parts of the chain have sufﬁcient quality and availability. Whenever these requirements cannot be provided locally, patients should be transferred
+            to an appropriate centre. Referral should take into account the patient’s preference.</p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header3" id="ENAS5526_3.2.2.0"  data-numtree="3.2.2.0"><span class="headers_span">3.2.2.0 Quality Control</span>
+        </div>
+
+        <p class="text">The importance of quality control in vascular surgery is well established. More than 40 years ago, the American Heart Association<span class="s15">’</span>s Committee on Vascular Surgery had already recommended as a minimum standard that “vascular
+            surgeons keep standardised and detailed records so that their work may be readily judged by its results”.<a href="157"><span class="text-sup">157</span></a> Local, regional, and national vascular surgical quality registries exist in many countries
+            and allow for continuous assessment of aortic practice and its outcome in participating centres.<a href="48"><span class="text-sup">48</span></a><span class="text-sup">,</span><a href="439"><span
+                    class="text-sup">439</span></a><span class="text-sup">,</span>
+            <a href="481"><span class="text-sup">481</span></a> Clinical audit of key outcome parameters (e.g. peri-operative mortality after elective aortic repair) allows for identiﬁcation of outliers, and appropriate intervention to improve outcomes.
+            <a href="220"><span class="text-sup">220</span></a> This is particularly important in the era of rapid technical and medical development, such as the introduction of new endovascular technologies and screening. The increasing use of endovascular
+            techniques has resulted in an ongoing change in indications with older and more comorbid patients being treated
+            <a href="401"><span class="text-sup">401</span></a> and a continuing evolution of EVAR devices, which have been assessed with variable rigour for different periods of follow up. Centres performing surgical treatment of AAA should therefore
+            preferably participate in registries which allow for continuous quality control assessment. To allow for meaningful evaluation of surgical quality, internal and external validity of such registries is of utmost importance.
+            <a href="700"><span class="text-sup">700</span></a>,<a href="740"><span class="text-sup">740</span></a> Generally, cases that are not registered tend to have worse outcomes.
+            <a href="185"><span class="text-sup">185</span></a> Population based prospective registries are also a dynamic complement to randomised controlled trials (RCT) in providing pilot data early on as well as later monitoring the generalisability
+            of new treatment strategies and technologies. Both randomised and nonrandomised sources of evidence have strengths and weaknesses.<a href="116"><span class="text-sup">116</span></a> High quality and validated registries have a low risk of
+            bias and reﬂect the daily practice over a longer time period and are region, nation, or continentwide. Aggregated results from RCTs and prospective registries have the potential to be major assets in guiding the local vascular surgeon as well
+            as nationwide policy makers.<a href="32"><span class="text-sup">32</span></a>
+            <p class="text">Patient reported outcome measures (PROMs) are questionnaires that provide a means of measuring health or quality of life (QoL) from the patient’s perspective.<a href="175"><span
+                        class="text-sup">175</span></a> Recently, three disease speciﬁc questionnaires were developed to assess QoL, symptoms and treatment satisfaction in patient with AAA; The Aneurysm Dependent Quality of Life Questionnaire (AneurysmDQoL),
+                The Aneurysm Symptom Rating Questionnaire (AneurysmSRQ), The Aneurysm Treatment Satisfaction Questionnaire (AneurysmTSQ).<span class="text">546,547</span> So far they have only been used in a small pilot study; however, showing their potential
+                for patients with small AAAs under surveillance as well as before and after surgical repair,
+                <a href="546"><span class="text-sup">546</span></a><span class="text-sup">,</span><a href="547"><span
+                        class="text-sup">547</span></a> and in a systematic review and qualitative evidence synthesis they were superior to generic PROMs, such as Short Form 36 and the Australian Vascular Quality of Life Index, in assessment of items
+                important to patients with an AAA.<a href="175"><span class="text-sup">175</span></a> Further evaluation and reﬁnement of AAA speciﬁc PROMs and their implementation, preferably within the framework of vascular surgery quality registries,
+                are warranted.</p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header3" id="ENAS5526_3.2.3.0"  data-numtree="3.2.3.0"><span class="headers_span">3.2.3.0 Resources </span>
+        </div>
+
+        <p class="text">The management of AAA has changed profoundly with the introduction of endovascular treatment options. Studies have convincingly shown the beneﬁt of EVAR in both elective and emergency AAA repair in patients with suitable anatomy. The continuously
+            decreasing peri-operative mortality and simultaneous increase in the utilisation of EVAR (at the expense of open surgical repair (OSR)) observed in several large population based studies, representing real world data, has provided additional
+            support for the use of EVAR as an essential part of modern AAA treatment. This is also reﬂected by the recommendations made in this updated guideline.</p>
+        <p class="text">At the same time, it is evident that some patients are not suitable for standard EVAR or more complex new endovascular treatment options but should instead be offered open surgery. Furthermore, complications after EVAR are not uncommon and may
+            require elective as well as acute open surgical treatment. Similarly, OSR may sometimes require adjuvant endovascular treatment.</p>
+        <p class="text">Consequently, one technique cannot entirely replace the other, at least not yet. Compromising the anatomical requirements for standard EVAR or using complex and partially unexplored endovascular techniques to avoid an established open surgical
+            solution at all costs, or just offering major open surgery when there are proven minimally invasive techniques just because it is outside ofﬁce hours, is not only unscientiﬁc, it is also unethical. Thus, today it is not acceptable to perform
+            aortic surgery without the ability to offer both technologies 24/7.<a href="50"><span
+                    class="text-sup">50</span></a><span class="text-sup">,</span><a href="70"><span
+                    class="text-sup">70</span></a><span class="text-sup">,</span>
+            <a href="237"><span class="text-sup">237</span></a><span class="text-sup">,</span><a href="287"><span
+                    class="text-sup">287-289</span></a><span class="text-sup">,</span><a href="378"><span
+                    class="text-sup">378</span></a><span class="text-sup">,</span>
+            <a href="386"><span class="text-sup">386</span></a><span class="text-sup">,</span><a href="541"><span
+                    class="text-sup">541</span></a><span class="text-sup">,</span><a href="558"><span
+                    class="text-sup">558</span></a><span class="text-sup">,</span>
+            <a href="606"><span class="text-sup">606</span></a>
+        </p>
+        <p class="text"><br /></p>
+        </li>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header3" id="ENAS5526_3.2.4.0"  data-numtree="3.2.4.0"><span class="headers_span">3.2.4.0 Surgical Volume</span>
+        </div>
+
+        <p class="text">The relationship between surgical volume (caseload) and outcome has been reported for a range of surgical and interventional specialties and has attracted considerable debate. However, the evidence for vascular surgery is robust and an association
+            has been repeatedly demonstrated between higher annual caseload and lower operative mortality for AAA repair.
+        </p>
+        <p class="text">In a study from 2002 including 140,000 AAA repairs in Medicare the 30 day mortality was 8% for low volume hospitals (&lt;17/year) compared to 4% in high volume hospitals (&gt;79/year).<a href="64"><span
+                    class="text-sup">64</span></a> Similarly, a 13% reduction in the odds of mortality for each additional 20 cases performed was observed in a UK audit<a href="279"><span class="text-sup">279</span></a> A meta-analysis of international
+            practice, including 421,229 elective AAA repairs, demonstrated signiﬁcantly favourable outcomes from higher volume units with a pooled effect estimate for mortality of odds ratio 0.66 (95% CI 0.65-0.67) for units performing 43 AAA repairs
+            per year.<a href="278"><span class="text-sup">278</span></a> A recent study including &gt;120,000 Medicare patients undergoing elective EVAR found a threshold for optimal outcomes of 30 EVAR cases per year.<a href="788"><span class="text-sup">788</span></a>            Others suggest a lower threshold of &#8805;10 EVAR cases in a setting with a total volume, including OSR, of &#8805;50 repairs per year.<a href="378"><span
+                    class="text-sup">378</span></a></p>
+        <p class="text">In addition to the relationship between hospital volume and mortality, a similar association has been observed for surgeons’ caseload and outcome.<a href="548"><span class="text-sup">548</span></a> However, this is harder to interpret in the modern
+            era, when AAA repair is performed by teams rather than individuals.<a href="33"><span
+                    class="text-sup">33</span></a></p>
+        <p class="text">The associations between volume and outcome have also been shown in the emergency setting, for ruptured AAA (rAAA) repair<a href="526"><span class="text-sup">526</span></a><span class="text-sup">,</span><a href="174"><span class="text-sup">174</span></a>
+            <span class="text-sup">,</span><a href="124"><span class="text-sup">124</span></a><span class="text-sup">,</span><a href="99"><span class="text-sup">99</span></a> and recent studies document that it is safe to transfer most rAAA patients to
+            the nearest high volume specialised vascular centre and that such a policy may, in fact, decrease mortality.
+            <a href="435"><span class="text-sup">435</span></a><span class="text-sup">,</span><a href="531"><span
+                    class="text-sup">531</span></a>
+            <span class="text-sup">,</span><a href="277"><span class="text-sup">277</span></a> In a recent international registry study, including 9273 patients from 11 countries treated for rAAA, the peri-operative mortality was lower in centres with
+            a primary EVAR approach or with high caseload volume; 23% in centres &gt;22 repairs per year versus 30% in centres with a caseload &lt;22, <span class="italic">p</span> &lt; 0.001. The observed difference in outcome was predominantly seen
+            after OSR, while no significant difference in peri-operative mortality after EVAR between centres based on volume could be observed. With most repairs still performed in very low volume centres and in centres with a primary OSR strategy reorganisation
+            of acute vascular surgical services has the potential to improve outcomes of rAAA repair.<a href="99"><span
+                    class="text-sup">99</span></a></p>
+        <p class="text">Surgeon speciality also has signiﬁcance for the outcome of AAA repair. In a study from the USA elective AAA mortality was lowest when operations were performed by vascular surgeons (2.2%), compared to cardiac surgeons (4%) and general surgeons
+            (5.5%) (
+            <span class="italic">p</span> &lt; 0.001). AAA repair performed by a general surgeon increased the risk of death by 76% compared to repair performed by a vascular surgeon.<a href="162"><span
+                    class="text-sup">162</span></a> The likelihood of receiving EVAR rather than OSR was higher when vascular surgeons performed the operation compared with treatment by general surgeons and cardiac surgeons.
+            <a href="706"><span class="text-sup">706</span></a> There is, however, no comparative study between vascular surgeons and interventional radiologists, who today represent the two specialities that perform most AAA operations. In addition,
+            several operations are now being carried out by a multidisciplinary team, making it difﬁcult to provide a clear recommendation. Even if no speciﬁc recommendation on the specialtyis made, the GWC advocates that AAA surgery should be done under
+            the leadership of a vascular surgeon.
+        </p>
+        <p class="text">In summary, the firm evidence of a volume outcome relationship makes it necessary and justifiable to make a recommendation on surgical volume. No clear threshold has, however, been defined in the literature. Instead, various cut off levels have
+            been suggested. Important methodological differences between the studies, such as different healthcare systems, study design, surgical techniques, and populations, make it difficult to perform a formal meta-analysis of the optimal surgical
+            volume. In addition, this is a sensitive issue with political implications making it challenging to provide a recommendation that can be accepted by everyone. Based on the literature, the GWC concluded that there is enough evidence for a rather
+            strong recommendation on the required minimum volume to perform aortic surgery at all, and a weaker recommendation on the desired minimum volume, which should also work in different healthcare settings and geographies and be accepted by most.</p>
+        <p class="text">Although available data indicate that surgical volume has an important impact on the outcome after OSR and to a lesser extent after EVAR, when adding detail to Recommendation 2, no distinction is made between EVAR and OSR and both types of repair
+            should be included in the total volume of cases.</p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header3" id="ENAS5526_3.2.5.0"  data-numtree="3.2.5.0"><span class="headers_span">3.2.5.0 Pathway for Treatment</span>
+        </div>
+
+        <p class="text">RCTs have demonstrated the safety of a policy of ultrasonographic surveillance for asymptomatic AAAs below the threshold for elective repair. Above this threshold, the risk of rupture increases exponentially, however, with significant individual
+            variation.
+            <a href="533"><span class="text-sup">533</span></a> There are limited data concerning a reasonable waiting time for treatment once the threshold for repair has been reached.</p>
+        <p class="text">Based on a retrospective analysis of 361 patients assigned for elective AAA repair, Noronen et al. suggested that the period from referral to operation should vary by AAA diameter: urgent (within 48 h) for AAAs &gt; 9 cm, one month for AAAs 7-9
+            cm, two months for AAAs 6-7 cm, and three months for AAAs &lt; 6 cm.<a href="511"><span
+                    class="text-sup">511</span></a> In the EVAR 2 trial, a RCT evaluating the long-term outcomes in physically frail patients with AAA treated with either early EVAR or no intervention, about 5% ruptured after randomisation but before
+            attempted surgery. The median aortic diameter was 6.4 cm and the median time between randomisation and repair was eight weeks.
+            <a href="192"><span class="text-sup">192</span></a><span class="text-sup">,</span><a href="193"><span
+                    class="text-sup">193</span></a> That rate is probably on the borderline of what is acceptable and thus indicates a possible upper limit on the waiting time for surgery.</p>
+        <p class="text">The AAA size also affects what is an acceptable waiting time to repair. In a retrospective study of 138 AAA patients not undergoing immediate repair, the cumulative rupture rate was 4% at one year, 16% at three years, and 36% at five years in
+            patients with baseline diameter 5.5-6.9 cm AAAs versus 35%, 71% and 100% in those with &gt; 7 cm AAAs.<a href="615"><span class="text-sup">615</span></a> In a recent meta-analysis, including 11 studies with total 1514 patients reporting follow
+            up of untreated large AAA, the annual rupture rates was 3.5% in AAAs 5.5-6.0 cm, 4.1% in AAAs 6.1-7.0 cm, and 6.3% in AAAs &gt 7.0 cm.<a href="533"><span class="text-sup">533</span></a></p>
+        <p class="text">In addition, there are psychological consequences of living with a large AAA, which seem to be reversible by surgery,</a><a href="275"><span class="text-sup">275</span></a><span class="text-sup">,</span><a href="407"><span class="text-sup">407</span></a>            which further underlines the need to keep the waiting time for referral and treatment at a minimum.</p>
+        <p class="text">Although there is no strong evidence to support exact timings, it is reasonable to adopt a similar approach as for other potentially lethal diseases, such as malignant disease. A suggested upper limit for the total pathway from referral to treatment
+            is eight weeks, once the intervention threshold has been reached. This applies, however, only to standard AAA cases, whereas in more complex aneurysms or comorbid patients a lengthier planning or work up time may be justified. Correspondingly,
+            a shorter timeframe should be pursued for larger AAAs.</p>
+
+        <p class="text">Management of aortic diseases includes dealing with true emergencies, such as rupture, requiring quick and efficient handling that places high demands on the organisation. Establishing a protocol or algorithm for managing these emergencies is
+            important to obtain optimal outcomes.<a href="467"><span class="text-sup">467</span></a><span class="text-sup">,</span><a href="489"><span class="text-sup">489</span></a><span class="text-sup">,</span><a href="651"><span class="text-sup">651</span></a>            A 35% relative risk reduction in 30 day mortality for managing rAAA, corresponding to an absolute risk reduction of 22.5%, was reported after implementation of a structured protocol.<a href="651"><span class="text-sup">651</span></a>
+        </p>
+        <p class="text"> A dedicated protocol has the potential to ensure a rapid and safe diagnosis, routine use of permissive hypotension pre-operatively,<a href="372"><span class="text-sup">372</span></a><span class="text-sup">,</span><a href="739"><span class="text-sup">739</span></a>            facilitate the use of EVAR,
+            <a href="705"><span class="text-sup">705</span></a> local anaesthesia,<a href="651"><span
+                    class="text-sup">651</span></a> and aortic occlusion balloon (AOB) when necessary.<a href="434"><span class="text-sup">434</span></a> When and how to notify the endovascular team, and secure a suitable operating environment, preferably
+            a hybrid room, should be de</span>fined. Protocolised management of life threatening post-operative complications, such as abdominal compartment syndrome (ACS) is also strongly recommended.<a href="68"><span
+                    class="text-sup">68</span></a>
+            <span class="text-sup">,</span><a href="349"><span class="text-sup">349</span></a></p>
+        <p class="text"> Guidelines and an established plan are also of importance in case of urgent referral/transportation to a high level facility for complex aortic repair.<a href="249"><span
+                    class="text-sup">249</span></a><span class="text-sup">,</span>
+            <a href="274"><span class="text-sup">274</span></a><span class="text-sup">,</span><a href="278"><span
+                    class="text-sup">278</span></a><span class="text-sup">,</span><a href="471"><span
+                    class="text-sup">471</span></a> </p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header1" id="ENAS5526_4.0.0.0"  data-numtree="4.0.0.0"><span class="headers_span">4.0.0.0. Epidemiology, Diagnosis &
+                Screening</span></div>
+
+
+
+        <div class="header2" id="ENAS5526_4.1.0.0"  data-numtree="4.1.0.0"><span class="headers_span">4.1.0.0. Epidemiology</span>
+        </div>
+
+
+
+
+        <div class="header3" id="ENAS5526_4.1.1.0"  data-numtree="4.1.1.0"><span class="headers_span">4.1.1.0 Deﬁnition of AAA</span>
+        </div>
+
+        <p class="text">Aneurysm, from the Ancient Greek word &#940;&#957;&epsilon;&#250;&rho;&#965;&sigma;&#956;&alpha;, means a dilatation or widening of an artery, most commonly being fusiform in shape. This chapter focuses on infrarenal AAAs. The most widespread
+            definition of an AAA is based on the diameter of the abdominal aorta: an abdominal aortic diameter of 3.0 cm or more, which usually is more than 2 standard deviations above the mean diameter for men, is considered to be aneurysmal.
+            <span class="text">186,388,409</span> This definition, based on external ultrasound diameters had a sensitivity of 67% and a specificity of 97% in predicting the need for AAA repair within 10 years.<a href="210"><span class="text-sup">210</span></a>            A lower threshold might be more appropriate in women and some Asian populations.<a href="399"><span class="text-sup">399</span></a><span class="text-sup">,</span><a href="672"><span class="text-sup">672</span></a></p>
+
+        <p class="text">Diameter measurements vary according to imaging methodology, with inner to inner wall measurements being about 0.3-0.6 cm smaller than outer to outer wall measurements, with leading edge to leading edge measurements being intermediate.
+            <a href="246"><span class="text-sup">246</span></a><span class="text-sup">,</span><a href="260"><span
+                    class="text-sup">260</span></a><span class="text-sup">,</span><a href="682"><span
+                    class="text-sup">682</span></a> Therefore, all studies should specify the site and plane of measurement of aortic diameter. Other researchers have suggested defining AAA as the maximum infrarenal aortic diameter being at least 1.5
+            times larger than the expected normal infrarenal aortic diameter or suprarenal aortic diameter to compensate for individual variation in the diameter of the adjacent aorta and the different diameters measured.<a href="304"><span class="text-sup">304</span></a>
+            <span class="text-sup">,</span>
+            <a href="339"><span class="text-sup">339</span></a> This 1.5 fold diameter increase also provides a useful basis for the definition of AAA in women, iliac artery and other aneurysms.</p>
+
+        <p class="text"><span class="bold">2.1.1.1. Suggested reporting standards for AAA.</span></p>
+        <p class="listlevel1">AAA in men of European origin can be defined as an abdominal aortic diameter of 3.0 cm in either anteroposterior or transverse planes. A lower threshold might be more appropriate in women and some Asian populations.</p>
+        <p class="listlevel1">AAA also can be defined when the maximum diameter is &#8805; 50% greater than the suprarenal diameter.</p>
+        <p class="listlevel1">The calliper placement, plane, and site of all measurements must be reported. This is particularly relevant for CT measurements, where the diameter in a plane perpendicular to the centreline should be reported and for all measurements the position
+            of calliper placement should be specified: see Chapter 2.2 for full details.</p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header3" id="ENAS5526_4.1.2.0"  data-numtree="4.1.2.0"><span class="headers_span">4.1.2.0 Prevalence of AAA</span>
+        </div>
+
+        <p class="text">AAA prevalence and incidence rates have decreased over the last 20 years, which has been attributed partially to the decline in smoking.</span class="text-sup">597,627,663</span>
+            <p class="text">Prevalence is negligible before the age of 55-60 years and thereafter prevalence increases steadily with age.<a href="597"><span class="text-sup">597</span></a> In 1990, the global prevalence in 75-79 year olds was 2423 per 100,000 population
+                versus 2275 in 2010;</a><a href="597"><span class="text-sup">597</span></a> the incidence has declined in both developed and developing countries. At both time points the prevalence was highest in Australasia, North America, and Western
+                Europe and lowest in Latin America and Central Asia. Population screening studies offer the best evidence regarding the contemporary prevalence of AAA. The current prevalence in 65 year old men is 1.7% in the Swedish Screening Programme
+                with an additional 0.5% with an already known AAA<a href="663"><span class="text-sup">663</span></a> and 1.3% in the UK National Screening Programme<a href="295"><span class="text-sup">295</span></a>
+                <span class="text-sup">,</span><a href="297"><span class="text-sup">297</span></a> and 3.3% in a Danish screening programme targeting men aged 65-74 years.<a href="241"><span class="text-sup">241</span></a> In contrast, a programme in
+                the USA which only offers screening to smokers reports a prevalence of over 5%.<a href="392"><span
+                        class="text-sup">392</span></a></p>
+            <p class="text">A corresponding 20-50% decline over the last two to three decades in rAAA hospital admissions and incidence of rAAA repair has been reported from many countries in Europe and the USA, despite an ageing population.
+                <a href="171"><span class="text-sup">171</span></a><span class="text-sup">,</span><a href="374"><span
+                        class="text-sup">374</span></a><span class="text-sup">,</span><a href="401"><span
+                        class="text-sup">401</span></a><span class="text-sup">,</span>
+                <a href="607"><span class="text-sup">607</span></a>
+            </p>
+            <p class="text"> Most studies show that the prevalence is up to fourfold less in women than men. A recent systematic review of publications between 2000 and 2015 indicates that the pooled prevalence of AAA in women over 60 years was 0.7%.
+                <span class="text-sup">707</span>
+            </p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header3" id="ENAS5526_4.1.3.0"  data-numtree="4.1.3.0"><span class="headers_span">4.1.3.0 Natural History of Small
+                AAA</span>
+        </div>
+
+        <p class="text">The natural history of small AAA is progressive growth in the majority of patients. The RESCAN study, an individual patient meta-analysis of &gt; 15,000 patients with AAA, 3.0-5.5 cm in diameter, indicated that (1) there was no difference in aneurysm
+            growth rates between men and women, both on average 2.2 mm/ year, (2) smoking increased aneurysm growth rates by 0.35 mm/year (about 16%), and (3) diabetes was associated with decreased aneurysm growth rates by 0.51 mm/year (approximately
+            25% reduction).
+            <a href="668"><span class="text-sup">668</span></a> Within the diameter range studied, there was an exponential increase in average growth rates from 1.3 mm/year for 3.0 cm aneurysms to 3.6 mm/year for 5.0 cm aneurysms. Aneurysm growth rates
+            do not appear to have changed over the past 25 years.<a href="522"><span class="text-sup">522</span></a></p>
+
+    </div>
+    <div class="content_div">
+
+        <div class="header3" id="ENAS5526_4.1.4.0"  data-numtree="4.1.4.0"><span class="headers_span">4.1.4.0 Risk Factors for AAA</span>
+        </div>
+
+        <p class="text">Smoking is the strongest risk factor for AAA, with an odds ratio of &gt; 3 for the association,
+            <a href="383"><span class="text-sup">383</span></a><span class="text-sup">,</span><a href="663"><span
+                    class="text-sup">663</span></a> and higher in women.
+            <a href="298"><span class="text-sup">298</span></a><span class="text-sup">,</span><a href="647"><span
+                    class="text-sup">647</span></a> A screening and validation study of USA veterans (between 50 and 79 years old
+            <span class="italic">n</span> = 114,419) noted the highest prevalence of AAA &#8805; 3.0 cm of 5.1% in white male smokers between 50 and 79 years.<a href="383"><span class="text-sup">383</span></a></p>
+        <p class="text">Other risk factors include age, atherosclerosis, hypertension, ethnicity, and family history of AAAs.
+            <a href="296"><span class="text-sup">296</span></a><span class="text-sup">,</span><a href="298"><span
+                    class="text-sup">298</span></a>
+            <span class="text-sup">,</span><a href="383"><span class="text-sup">383</span></a><span class="text-sup">,</span><a href="663"><span class="text-sup">663</span></a> Unique twin registry studies from Sweden and Denmark suggest that the heritability
+            may be as high as 70%.<a href="751"><span class="text-sup">751</span></a><span class="text-sup">,</span><a href="307"><span class="text-sup">307</span></a></p>
+        <p class="text"> The risk of developing AAA in a person with diabetes, especially type II diabetes, is about half that in a person without diabetes.<a href="384"><span class="text-sup">384</span></a><span class="text-sup">,</span>
+            <a href="620"><span class="text-sup">620</span></a>
+        </p>
+    </div>
+    <div class="content_div">
+
+        <div class="header2" id="ENAS5526_4.2.0.0"  data-numtree="4.2.0.0"><span class="headers_span">4.2.0.0 Diagnosis</span>
+        </div>
+
+
+        <div class="header3" id="ENAS5526_4.2.1.0"  data-numtree="4.2.1.0"><span class="headers_span">4.2.1.0 Overview</span>
+        </div>
+        <p class="text">This section assesses modalities used for the diagnosis of AAA. The suitability of different imaging modalities is discussed, and their ability to assess aneurysm size and extent is evaluated. In addition, imaging modalities providing for the
+            incidental diagnosis of AAA are discussed.</p>
+    </div>
+    <div class="content_div">
+
+        <div class="header3" id="ENAS5526_4.2.2.0"  data-numtree="4.2.2.0"><span class="headers_span">4.2.2.0 Clinical Signs</span>
+        </div>
+
+        <p class="text">AAAs are usually clinically silent. Physical examination may reveal a pulsatile mass, but abdominal palpation has a sensitivity &lt; 50% for detection of AAA<a href="320"><span
+                    class="text-sup">320</span></a> and decreases in patients with an abdominal girth more than 100 cm.
+            <a href="51"><span class="text-sup">51</span></a><span class="text-sup">,</span><a href="388"><span
+                    class="text-sup">388</span></a> Therefore, abdominal palpation is not reliable for the diagnosis of AAA.
+        </p>
+        <p class="text">Symptoms or signs of an intact AAA, if present, are mainly pain or tenderness on palpation, localised to the AAA or radiating to the back or to the genitals. Symptoms may be related to complications, either by compression of nearby organs (duodenal
+            obstruction, lower limb oedema, ureteral obstruction) or distal embolism.</p>
+        <p class="text">For rupture the signs are usually more dramatic (haemodynamic collapse, pallor, abdominal and/or back pain, abdominal distension, and rarely primary aorto-enteric or arterio-venous fistula).</p>
+    </div>
+
+   
+    <div class="content_div">
+        <div class="header3" id="ENAS5526_4.2.3.0"  data-numtree="4.2.3.0"><span class="headers_span">4.2.3.0 Imaging Techniques</span>
+        </div>
+
+        <div class="header4" id="ENAS5526_4.2.3.1"  data-numtree="4.2.3.1"><span class="headers_span">4.2.3.1 Ultrasonography</span>
+        </div>
+
+
+        <p class="text">Abdominal ultrasound (US) and duplex ultrasonography (DUS) are first line imaging tools for detection and management of small AAAs, with high sensitivity and specificity.<a href="409"><span
+                    class="text-sup">409</span></a><span class="text-sup">,</span>
+            <a href="416"><span class="text-sup">416</span></a> US may also be used to detect AAA in the emergency room
+            <a href="153"><span class="text-sup">153</span></a><span class="text-sup">,</span><a href="590"><span
+                    class="text-sup">590</span></a> but there are no studies evaluating the accuracy of diameter measurement in the emergency setting. Limitations are (1) obesity or excess bowel gas; (2) variation of aortic diameters with the cardiac
+            cycle; (3) the absence of serial image reconstruction to allow for stent graft planning; (4) methodological differences (in training and instrumentation), and (5) visualisation of the suprarenal aorta can be difficult and there is no visualisation
+            of the thoracic aorta.
+        </p>
+        <p class="text"> Some of these limitations can be resolved by training and reporting standards: measurement performed in diastole versus systole, may result in a 2 mm lower diameter.<a href="240"><span
+                    class="text-sup">240</span></a> The use of a standardised US protocol including ECG gating and subsequent ofﬂine reading with minute calliper placement reduces variability.
+            <a href="87"><span class="text-sup">87</span></a> Measurements must be performed in a plane perpendicular to the aortic longitudinal axis, which will vary in the presence of aortic tortuosity.</span>
+        </p>
+        <p class="text">Different diameters can be measured/reported: anteroposterior, transverse, maximum in any direction.
+        </p>
+        <p class="text">In a review by Beales, intra-observer coefficients of repeatability for the antero-posterior and transverse diameters vary from 1.6 to 7.5 mm and from 2.8 to 15.4 mm, respectively,<a href="47"><span
+                    class="text-sup">47</span></a> which supports the use of the anteroposterior diameter as the principal measuring plane.</p>
+        <p class="text">Calliper positioning determines which aortic boundaries are selected to de</span>fine diameter:
+            <a href="416"><span class="text-sup">416</span></a> outer, inner or leading edge, or combinations of these (Fig. 2.1 ). The existing literature is unclear which method has the best reproducibility, although the inter-observer variability for
+            outer to outer (OTO) measurement has often been reported as lower than for ITI and LELE measurements.<a href="63"><span class="text-sup">63</span></a>
+            <span class="text-sup">,</span><a href="77"><span class="text-sup">77</span></a><span class="text-sup">,</span><a href="246"><span class="text-sup">246</span></a><span class="text-sup">,</span><a href="260"><span class="text-sup">260</span></a>
+            <span class="text-sup">,</span><a href="682"><span class="text-sup">682</span></a> Furthermore, it is important to acknowledge that the measured aortic diameter signi</span>ficantly depends on the method used.
+            <a href="246"><span class="text-sup">246</span></a> Given the variation of evidence, opinion and established routines, and the importance of training, it is not possible to specify the preferred method at this stage. Until international consensus
+            is reached, it is important to use
+            <span class="italic">one</span> method consistently within every clinical programme.</span>
+
+            <p class="text">Insufficient attention to reporting standards (specifying plane and positioning of callipers) is an important cause of poor interand intra-observer reproducibility.<a href="416"><span
+                        class="text-sup">416</span></a>The acceptable standard for measurement repeatability is that the limits of agreement should be &#177; 5 mm (meaning that the mean difference between measurements is &lt; 5 mm for 95% of measurements).
+                <a href="416"><span class="text-sup">416</span></a>
+            </p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.2.3.2"  data-numtree="4.2.3.2"><span class="headers_span">4.2.3.2 CTA</span>
+        </div>
+        <p class="text">Computed tomography (CT) angiography (CTA) plays a key role in assessing the extent of disease and therapeutic decision making and planning. CTA is also the recommended imaging modality for the diagnosis of rupture and is an important tool in
+            follow up after repair.<a href="589"><span class="text-sup">589</span></a></p>
+
+        <p class="text">Many of the same issues concerning measurement by US apply to CT measurement, for example axial versus orthogonal centreline diameters, changes with the cardiac cycle and details of calliper placement.
+            <a href="490"><span class="text-sup">490</span></a><span class="text-sup">,</span><a href="491"><span
+                    class="text-sup">491</span></a> When applying predefined methodologies, intra-observer reproducibility can be within the clinically accepted range (&#177; 5 mm) in 90% AAA measurements, but the inter-observer reproducibility is poor,
+            with 87% comparisons being outside &#177; 5 mm.<span class="text">490</span> This variability is of particularly high clinical significance, since the number of patients considered for AAA repair, based on a diameter threshold, may vary from
+            11% to 24%, 5%-20%, and 15%-23% for three different radiologists.<a href="490"><span
+                    class="text-sup">490</span></a> There is no evidence whether this variability could be reduced with ECG gating, which carries the disadvantage of increased radiation dosage.<a href="240"><span
+                    class="text-sup">240</span></a></p>
+
+        <p class="text">CTA provides several advantages for intervention planning: it provides a complete data set of the entire aorta (including the thoracic aorta) and access vessels, which with dedicated post-processing software enables analysis in three perpendicular
+            planes, construction of a centreline, and accurate diameter and length measurement. This reconstruction allows for pre-intervention planning for EVAR and three dimensional image fusion of CTA and angiography for real time peri-operative guidance.
+            A prerequisite for a good reconstruction is CTA with 1 mm slice thickness. CTA provides additional information on patency/stenosis of arterial tributaries, position and/or duplication of the left renal vein, neck morphology, and aortic wall
+            integrity at the level of the neck, useful for endovascular and OSR planning.</p>
+        <p class="text">Limitations include the use of nephrotoxic contrast agents and radiation. It is important to assess renal function before CT scan and to ensure adequate hydration for those with marginal renal function. Recent evidence does not suggest that there
+            are clear advantages for any specific hydration protocol including whether hydration is oral or intravenous.
+            <a href="351"><span class="text-sup">351</span></a><span class="text-sup">,</span>
+            <a href="451"><span class="text-sup">451</span></a>
+        </p>
+        <p class="text">Irradiation of the patient, especially with repeated CT scanning, may have an ensuing cancer risk. The mean estimated annual cumulative effective dose is 104 mSv per patient-year for EVAR, with a 0.8% average risk of exposure induced death.
+            <a href="86"><span class="text-sup">86</span></a> The radiation risk during EVAR may be higher in younger patients.
+            <a href="72"><span class="text-sup">72</span></a> Several methods are emerging to reduce the radiation dosage associated with CT scans.
+        </p>
+
+        <p class="text">Finally, there is often poor agreement between US and CTA diameters, particularly close to the treatment threshold. Again, much of this difference is probably attributable to inadequate reporting standards with respect to specification of aortic
+            axis, plane of measurement and calliper placement, although differences in instrumentation also will be contributory. Most often, this results in a larger diameter on CTA compared with US, and it has been reported that for US diameters of
+            50-55 mm, up to 70% of AAAs exceed 55 mm on CTA.<a href="207"><span class="text-sup">207</span></a> US is recommended for surveillance of small AAA and CTA for pre-operative imaging, i.e. CTA should be performed when the size threshold for
+            repair has been reached, as assessed by US.</p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.2.3.3"  data-numtree="4.2.3.3"><span class="headers_span">4.2.3.3 MRI</span>
+        </div>
+
+
+        <p class="text">Magnetic resonance imaging (MRI) is less widely available than CTA, with contraindications such as claustrophobia and some metal implants. However, MRI does not require radiation or injection of iodinated contrast agents, and therefore has an
+            advantage over CTA when AAA management requires repeated imaging. There are few data concerning the use of MRI for routine AAA management in clinical practice, either for MRI or contrast enhanced MR angiography (CE MRA). Measurement comparisons
+            with the gold standard CTA are scarce.<a href="189"><span class="text-sup">189</span></a></p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.2.3.4"  data-numtree="4.2.3.4"><span class="headers_span">4.2.3.4 PET-CT</span>
+        </div>
+
+
+        <p class="text"><span class="text-sup">18</span>Fluoro-deoxyglucose PET-CT localises and quantifies metabolic activity of cells, including inﬂammatory cells. <span class="text-sup">18</span>Fluoro-deoxyglucose PET-CT is a complementary imaging method for the
+            diagnosis and follow up of aortic pathologies associated with inﬂammatory aneurysm,<a href="596"><span
+                    class="text-sup">596</span></a> aortic infection, including mycotic AAAs,
+            <a href="496"><span class="text-sup">496</span></a> infected prostheses and stent grafts (see Chapter 6). Apart from these indications, PET-CT is primarily a research tool.</p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.2.3.5"  data-numtree="4.2.3.5"><span class="headers_span">4.2.3.5 Incidental Detection</span>
+        </div>
+
+
+        <p class="text">Diagnostic imaging used for the investigation of other pathologies including back or chest pain, abdominal and genitourinary symptoms may also detect AAA. While US and CT scan are most commonly used, there are other imaging modalities including
+            echocardiography, CT colonography, and spinal imaging which may diagnose an AAA.<a href="8"><span
+                    class="text-sup">8</span></a><span class="text-sup">,</span><a href="231"><span
+                    class="text-sup">231</span></a>
+            <span class="text-sup">,</span><a href="341"><span class="text-sup">341</span></a><span class="text-sup">,</span><a href="539"><span class="text-sup">539</span></a><span class="text-sup">,</span><a href="774"><span class="text-sup">774</span></a>            There is little information about the sensitivity and specificity of these imaging modalities for the diagnosis of AAA. There also is the worrying observation that many of these incidentally diagnosed AAAs are ignored and not referred to vascular
+            surgeons.
+            <a href="463"><span class="text-sup">463</span></a><span class="text-sup">,</span><a href="672"><span
+                    class="text-sup">672</span></a><span class="text-sup">,</span>
+            <a href="734"><span class="text-sup">734</span></a>
+        </p>
+    </div>
+    <div class="content_div">
+        <div class="header2" id="ENAS5526_4.3.0.0"  data-numtree="4.3.0.0"><span class="headers_span">4.3.0.0 Screening</span>
+        </div>
+
+        <div class="header3" id="ENAS5526_4.3.1.0"  data-numtree="4.3.1.0"><span class="headers_span">4.3.1.0 Overview of Screening</span>
+        </div>
+        <p class="text">This section aims to answer the following questions: (1) Does population screening for AAA reduce total AAA related mortality? (2) Does population screening for AAA reduce all cause mortality?, and (3) What is the evidence to support recommendations
+            on AAA screening?</p>
+        <p class="text">US can reliably image the infrarenal aorta in 98.5% of subjects<a href="409"><span
+                    class="text-sup">409</span></a> but visualising the aorta may be difficult in some cases (1-2%) and this should be recognised. In difficult cases the subject should be rescanned, after overnight fasting, in a hospital setting by an
+            experienced sonographer.</p>
+    </div>
+    <div class="content_div">
+        <div class="header3" id="ENAS5526_4.3.2.0"  data-numtree="4.3.2.0"><span class="headers_span">4.3.2.0 Population Screening for AAA in
+                Men</span>
+        </div>
+
+        <div class="header4" id="ENAS5526_4.3.2.1"  data-numtree="4.3.2.1"><span class="headers_span">4.3.2.1 USG Screening in Older
+                Persons</span>
+        </div>
+
+        <p class="text">There have been four randomised trials of population based screening for AAA in men in the UK, Denmark, and Australia (Table 2.1 )<a href="408"><span class="text-sup">408</span></a><span class="text-sup">,</span>
+            <a href="495"><span class="text-sup">495</span></a><span class="text-sup">,</span><a href="509"><span
+                    class="text-sup">509</span></a><span class="text-sup">,</span><a href="614"><span
+                    class="text-sup">614</span></a><span class="text-sup">,</span>
+            <a href="690"><span class="text-sup">690</span></a><span class="text-sup">,</span><a href="691"><span
+                    class="text-sup">691</span></a> and one small trial of screening in women in the UK.</a><a href="613"><span class="text-sup">613</span></a> All the trials used population registers to identify potential participants of age 65 years
+            or older and randomisation was either to an invitation for screening or no invitation to screening. The largest trial, MASS in the UK, excluded persons who were identified as having serious health problems or previous AAA repair, whereas the
+            other trials had no exclusion criteria. Using Cochrane criteria,<a href="132"><span
+                    class="text-sup">132</span></a> all the trials were of reasonable quality, with MASS and the Danish trial being of good quality.<a href="408"><span class="text-sup">408</span></a><span class="text-sup">,</span><a href="495"><span class="text-sup">495</span></a>            Three of the trials used prespecified surveillance and or referral protocols for those in whom an AAA was detected but the Australian trial referred patients to their primary care doctor. The primary outcome for all trials was AAA related
+            mortality. Additionally, one similarity between the trials, not listed in Table 2.1, is that all trials were conducted in relatively advanced socioeconomic areas predominantly outside the largest cities and in persons of Caucasian origin.
+
+        </p>
+
+        <p class="text">The four screening trials in men have been summarised in a Cochrane Review and by the USA Preventive Services Task Force.<a href="132"><span class="text-sup">132</span></a><span class="text-sup">,</span>
+            <a href="244"><span class="text-sup">244</span></a> Overall there was a reduction in AAA specific mortality with the Cochrane review reporting the odds ratio in favour of screening for men as 0.60 (95% CI 0.47-0.78) and the USA Preventive
+            Task Force reporting an odds ratio of 0.53 (95% CI 0.42-0.68). There was significant reduction in AAA related mortality in the MASS and Viborg trials at all time points from 3 to 15 years of follow up but not in the Australian trial.-
+            <a href="458"><span class="text-sup">458</span></a> This latter trial has recently published its long-term follow up and these data have been included in a meta-analysis in the associated editorial.
+            <a href="390"><span class="text-sup">390</span></a> At the longest reported follow up from each trial, all cause mortality was significantly lower in the groups invited to screening, risk ratio 0.987 (95% CI 0.975-0.999,
+            <span class="italic">p</span> = 0.03).<a href="390"><span class="text-sup">390</span></a> Therefore, aneurysm screening is almost unique in reducing both cause specific and all cause mortality. A recent Swedish nationwide study confirmed the
+            result from the RCTs in a contemporary population based setting<a href="758"><span
+                    class="text-sup">758</span></a> and recent further support for AAA screening as part of multimodality screening in reducing all cause mortality comes from the Danish Viva trial.
+            <a href="410"><span class="text-sup">410</span></a></p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.3.2.2"  data-numtree="4.3.2.2"><span class="headers_span">4.3.2.2 Harms, Benefits and
+                Limitations</span>
+        </div>
+
+
+        <p class="text">The principal harms of screening are associated with an increased rate of elective AAA repair (with its associated morbidity and mortality) and effects on quality of life. The number of elective repairs increased approximately twofold in persons
+            invited to screening, although this is partially offset by the reduction of emergency AAA repairs.
+            <a href="295"><span class="text-sup">295</span></a><span class="text-sup">,</span>
+            <a href="297"><span class="text-sup">297</span></a><span class="text-sup">,</span><a href="690"><span
+                    class="text-sup">690</span></a><span class="text-sup">,</span><a href="691"><span
+                    class="text-sup">691</span></a><span class="text-sup">,</span>
+            <a href="758"><span class="text-sup">758</span></a> The high mortality associated with rupture combined with low elective peri-operative risk results in the number of men needed to screen of 667 and to treat with AAA repair of 1.5 in order
+            to prevent one premature AAA related death.<a href="758"><span class="text-sup">758</span></a></p>
+        <p class="text">Quality of life has been assessed using generic questionnaires and the diagnosis of AAA appears to be associated with a transient small reduction in quality of life, with recovery by 12 months.<a href="18"><span class="text-sup">18</span></a>
+            <span class="text-sup">,</span><a href="407"><span class="text-sup">407</span></a><span class="text-sup">,</span><a href="449"><span class="text-sup">449</span></a><span class="text-sup">,</span><a href="646"><span class="text-sup">646</span></a>            However, only generic tools were used which may not detect subtle changes in quality of life or psychological harms. A more recent study and systematic review suggested that both the physical the psychological harms are significant and further
+            research is warranted.<a href="44"><span class="text-sup">44</span></a><span class="text-sup">,</span><a href="133"><span class="text-sup">133</span></a></p>
+        <p class="text">Detection of AAA, which may be the index cardiovascular disease, always warrants cardiovascular risk assessment and lifestyle advice, providing an opportunity to improve cardiovascular health. The benefits of smoking cessation, BP control, and
+            other relevant lifestyle and therapeutic changes are discussed Chapter 3.</p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.3.2.3"  data-numtree="4.3.2.3"><span class="headers_span">4.3.2.3 Contemporary Evidence About
+                Screening</span>
+        </div>
+
+
+        <p class="text">There are several limitations in translating the results of these screening trials to contemporary practice. The trials all started in the last century when the prevalence of AAA was 4-7% in the men screened and most of the repairs were performed
+            using open surgery. Today the population prevalence of AAA has reduced by two to threefold in several European countries and EVAR has become the treatment modality in elective and increasingly in emergency repairs too. In addition, with more
+            widespread use of diagnostic imaging, the incidental detection rate of AAA is likely to have increased. Also, life expectancy has increased substantially. Therefore, it is appropriate to consider the contemporary evidence from two European
+            countries with national aneurysm screening programmes for older men (UK and Sweden) and the Danish VIVA trial. These three studies indicate that screening remains cost effective in these health economies.
+            <a href="225"><span class="text-sup">225</span></a><span class="text-sup">,</span><a href="641"><span
+                    class="text-sup">641</span></a><span class="text-sup">,</span>
+            <a href="662"><span class="text-sup">662</span></a><span class="text-sup">,</span><a href="664"><span
+                    class="text-sup">664</span></a><span class="text-sup">,</span><a href="665"><span
+                    class="text-sup">665</span></a><span class="text-sup">,</span>
+            <a href="758"><span class="text-sup">758</span></a> The national screening programmes offer screening to men age 65 years and the VIVA trial offered screening to men aged 65-74 years, but the optimum age at which there is greatest benefit
+            in terms of lives saved and cost benefit has not been assessed formally.</p>
+        <p class="text"> Screening programmes may take up to 10 years to reach maximum impact, so that conclusions reached at earlier time points could be misleading.<a href="303"><span class="text-sup">303</span></a></p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.3.2.4"  data-numtree="4.3.2.4"><span class="headers_span">4.3.2.4 Surveillance Intervals and
+                Management</span>
+        </div>
+
+        <p class="text">These issues are discussed in the Chapter 3.1.</p>
+        <p class="text">When the screening detected aneurysms are large enough to warrant repair (by either OSR or EVAR), the operative mortality appears to be very low, probably lower than for incidentally detected AAA.<a href="411"><span class="text-sup">411</span></a>            In Sweden, the operative mortality was 0.9% for OSR and 0.3% for EVAR.<a href="758"><span class="text-sup">758</span></a> The operative mortality after OSR and EVAR in screen detected aneurysms in the UK was 0.9% and 0.7% respectively.
+            <a href="295"><span class="text-sup">295</span></a><span class="text-sup">,</span><a href="297"><span
+                    class="text-sup">297</span></a></p>
+    </div>
+    <div class="content_div">
+        <div class="header3" id="ENAS5526_4.3.3.0"  data-numtree="4.3.3.0"><span class="headers_span">4.3.3.0 Subaneurysmal Aortic
+                Dilatation</span>
+        </div>
+
+
+        <p class="text">Subaneurysmal aortic dilatation (maximum aortic diameter 2.5-2.9 cm in men) is a topic of current interest and the early reports suggest that more than half of these aortas will exceed 3.0 cm within 5 years and one quarter will reach 5.5 cm
+            <span class="s31"> within 10-15 years.<a href="522"><span class="text-sup">522</span></a><span class="text-sup">,</span><a href="662"><span class="text-sup">662</span></a><span class="text-sup">,</span>
+            <a href="664"><span class="text-sup">664</span></a><span class="text-sup">,</span><a href="665"><span
+                        class="text-sup">665</span></a><span class="text-sup">,</span><a href="769"><span
+                        class="text-sup">769</span></a> </p>
+        <p class="text">In the final follow up of MASS the long-term protective effect of screening appeared to decline due to ruptures after &#8805; 8 years among men initially screened normal (&lt; 3.0 cm). Approximately half of these ruptures occurred among those
+            with subaneurysmal aortic dilatation at the time of screening.<a href="686"><span
+                    class="text-sup">686</span></a></p>
+        <p class="text">Although there is only limited evidence regarding the clinical relevance and cost effectiveness of surveillance of persons with subaneurysmal aortic dilatation,<a href="252"><span
+                    class="text-sup">252</span></a><span class="text-sup">,</span>
+            <a href="641"><span class="text-sup">641</span></a> current knowledge makes it justifiable to recommend that men with subaneurysmal aortic dilatation with a reasonable life expectancy may be considered for rescreening after 5-10 years. The
+            fact that this group constitutes a small cohort (&lt; 5% of all men screened) means that such a measure does not require large resources.</p>
+    </div>
+    <div class="content_div">
+        <div class="header3" id="ENAS5526_4.3.4.0"  data-numtree="4.3.4.0"><span class="headers_span">4.3.4.0 Screening in Other
+                Subgroups</span>
+        </div>
+
+        <div class="header4" id="ENAS5526_4.3.4.1"  data-numtree="4.3.4.1"><span class="headers_span">4.3.4.1 Overview of Screening in Other
+                Subgroups</span>
+        </div>
+        <p class="text">Consideration has been given to the merits of screening by different subgroups, including women and those relating to smoking, ethnicity, those having or having had relatives with AAA, those with other peripheral aneurysms, and those with other
+            cardiovascular diseases.
+        </p>
+    </div>
+
+    
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.3.4.2"  data-numtree="4.3.4.2"><span class="headers_span">4.3.4.2 Women</span>
+        </div>
+
+
+        <p class="text">There is limited evidence for screening in women, with the only randomised trial being underpowered (Scott BJS 2002). Nevertheless, based on the much lower AAA prevalence in women<a href="661"><span class="text-sup">661</span></a>
+            <span class="text-sup">,</span><a href="707"><span class="text-sup">707</span></a> population screening has not been considered.<a href="395"><span class="text-sup">395</span></a></p>
+        <p class="text">Recently, a discrete event simulation model was developed to provide a clinically realistic model of screening, surveillance, and elective and emergency AAA repair operations. Input parameters specifically for women were employed, and parameter
+            uncertainty addressed by deterministic and probabilistic sensitivity analyses. The base case model adopted the same age at screening (65 years), definition of AAA (&#8805; 3.0 cm), surveillance intervals and AAA diameter for consideration
+            of surgery (5.5 cm) as for men. The prevalence was low (0.43%) and operative mortality rates about twice as high as in men. The simulation model showed that the base case and all alternative scenarios (including screening at older ages, definition
+            of AAA as 2.5 cm, intervention at lower thresholds) resulted in minimal gain in quality adjusted life years and would probably not be cost effective. The authors suggest that while population screening of women should not be considered at
+            this time, further information is required about the aortic size distribution, definition of an AAA, and harms of screening in women.<a href="671"><span class="text-sup">671</span></a>
+            <span class="text-sup">,</span><a href="672"><span class="text-sup">672</span></a></p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.3.4.3"  data-numtree="4.3.4.3"><span class="headers_span">4.3.4.3 Smoking</span>
+        </div>
+
+        <p class="text">The dominant risk factor for AAA is smoking. It has been estimated that 75% of all AAA cases in the population are mainly attributable to smoking.<a href="383"><span class="text-sup">383</span></a><span class="text-sup">,</span>
+            <a href="383"><span class="text-sup">663</span></a> The USA Preventive Services Task Force has recommended AAA screening for men aged 65-75 years who have ever smoked, based on the strength of the association between smoking and AAA rather
+            than evidence from randomised trials.<a href="395"><span class="text-sup">395</span></a> With a recommended screening strategy targeting all men aged 65 years there is currently no need for targeting screening based on smoking status.
+            </span>
+        </p>
+        <p class="text">There is an ongoing discussion about whether selective screening of smoking women may be worthwhile, based on the higher AAA prevalence in this subgroup of women<a href="662"><span
+                    class="text-sup">662</span></a>
+            <span class="text-sup">,</span><a href="664"><span class="text-sup">664</span></a><span class="text-sup">,</span><a href="665"><span class="text-sup">665</span></a><span class="text-sup">,</span><a href="707"><span class="text-sup">707</span></a>            and the higher rupture rate of small AAAs among women.<a href="94"><span class="text-sup">94</span></a> This may be counterbalanced by a lower life expectancy and higher operative risk in this subgroup, and, so far, there is no supporting
+            evidence for screening these women.</p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.3.4.4"  data-numtree="4.3.4.4"><span class="headers_span">4.3.4.4 Ethnicity</span>
+        </div>
+
+
+        <p class="text">Ethnicity Studies from the UK, have reported a very low prevalence of AAA (0.2%) in subjects of Asian ethnic origin.<a href="296"><span class="text-sup">296</span></a> In the USA, the prevalence is lower in those of African American descent than
+            whites.
+            <a href="298"><span class="text-sup">298</span></a> However, few European studies consider ethnicity.</p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.3.4.5"  data-numtree="4.3.4.5"><span class="headers_span">4.3.4.5 Family History of AAA</span>
+        </div>
+
+
+        <p class="text">There are reports from several countries of an increased incidence of AAA among first degree relatives of AAA patients. In a Swedish population study, a family history of AAA increased the risk of AAA, odds ratio 1.9 (95% CI 1.6-2.20.
+            <a href="380"><span class="text-sup">380</span></a> Family history of AAA is suggested to be associated with more rapid growth of the aneurysm and higher rupture rate<a href="7"><span class="text-sup">7</span></a>
+            <span class="text-sup">,</span><a href="743"><span class="text-sup">743</span></a> and rupture may occur at smaller aneurysm diameter and at lower age.<a href="743"><span class="text-sup">743</span></a> Although the benefit of AAA screening
+            in those with a family history of AAA has not been assessed formally, it is recommended in all men and women aged 50 years and older with a first degree relative with an AAA.</p>
+    </div>
+    <div class="content_div">
+        <div class="header4" id="ENAS5526_4.3.4.6"  data-numtree="4.3.4.6"><span class="headers_span">4.3.4.6 Other Peripheral Aneurysms and
+                CVD</span>
+        </div>
+        <p class="text">Because of the high co-existence of AAA with other peripheral aneurysms (iliac, femoral, popliteal),
+            <a href="571"><span class="text-sup">571</span></a> these patients are routinely screened for AAA as well as for other peripheral aneurysms. In a study of 190 patients operated on for popliteal artery aneurysm, 39% developed a new aneurysm
+            during a mean 7 years’ follow up, of which 43% were AAAs.<a href="571"><span class="text-sup">571</span></a>
+        </p>
+        <p class="text">Some relatively small studies have indicated a high incidence of AAA in patients with other cardiovascular disease: carotid stenosis,</a>12 coronary heart disease,<a href="267"><span
+                    class="text-sup">267</span></a> and PAD.
+            <a href="12"><span class="text-sup">12</span></a> The benefit of AAA screening in patients with cardiovascular disease has, however, not been assessed formally, and the lower life expectancy and higher operative risks for these patients may
+            counterbalance the potential benefit of a high prevalence.<a href="759"><span
+                    class="text-sup">759</span></a> Thus, there is no supporting evidence for such a strategy.</p>
+    </div>
+</body>
+
+</html>
